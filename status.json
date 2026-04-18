@@ -1,20 +1,20 @@
 {
-  "memory_total_gb": 128,
-  "memory_available_gb": 74.6,
-  "datos_total_tb": 24,
-  "datos_used_tb": 14.8,
-  "backup_total_tb": 32,
-  "backup_used_tb": 21.9,
-  "fast_total_tb": 4,
-  "fast_used_gb": 1180,
-  "load_average_1m": 2.43,
-  "uptime_human": "38 días, 7 horas",
-  "updated_at": "18/04/2026 14:20",
+  "memory_total_gb": 125.6,
+  "memory_available_gb": 118.9,
+  "datos_total_tb": 6.3,
+  "datos_used_tb": 3.9,
+  "backup_total_tb": 14.4,
+  "backup_used_tb": 3.9,
+  "fast_total_tb": 1.8,
+  "fast_used_gb": 0.5,
+  "load_average_1m": 0.07,
+  "uptime_human": "22 hours, 11 minutes",
+  "updated_at": "18/04/2026 15:51",
   "services": {
     "postgresql": "up",
     "docker": "up",
-    "geoserver": "up",
-    "webodm": "degraded",
+    "geoserver": "down",
+    "webodm": "up",
     "jupyter": "up"
   }
 }

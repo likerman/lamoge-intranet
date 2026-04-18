@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Usos del servidor | Intranet de LaMoGe</title>
+  <meta
+    name="description"
+    content="Guía básica de uso del servidor de LaMoGe para usuarios del laboratorio."
+  >
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Volver al inicio de la intranet de LaMoGe">
+        <img src="../assets/lamoge-logo.png" alt="Logo de LaMoGe" width="108" height="108">
+        <span class="brand-text">
+          <span class="brand-name">Intranet LaMoGe</span>
+          <span class="brand-subtitle">Portal de acceso a servicios y documentación del laboratorio</span>
+        </span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main-content" class="doc-page">
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Guía de inicio</p>
+          <h1>Usos del servidor</h1>
+          <p>
+            Esta guía está pensada para usuarios que recién comienzan a trabajar con el servidor de LaMoGe y
+            necesitan entender para qué sirve, cómo ingresar y cómo usarlo de manera ordenada y segura.
+          </p>
+        </div>
+
+        <article class="doc-card">
+          <h2>¿Para qué sirve este servidor?</h2>
+          <p>El servidor concentra infraestructura compartida del laboratorio para tareas como:</p>
+          <ul class="doc-list">
+            <li>ejecutar servicios técnicos como JupyterLab, WebODM, GeoServer o bases de datos</li>
+            <li>trabajar con proyectos y datos desde una cuenta institucional</li>
+            <li>guardar resultados y materiales de uso frecuente</li>
+            <li>mantener copias de seguridad y archivo de información importante</li>
+          </ul>
+        </article>
+
+        <article class="doc-card">
+          <h2>Qué necesita un usuario para empezar</h2>
+          <ul class="doc-list">
+            <li>usuario asignado por administración</li>
+            <li>contraseña inicial o credenciales de acceso</li>
+            <li>dirección IP o nombre del servidor</li>
+            <li>saber cuál es su carpeta de trabajo y su carpeta de backup</li>
+          </ul>
+          <pre class="doc-code"><code>Carpeta de trabajo: /datos/usuario
+Carpeta de backup: /backup/users/usuario</code></pre>
+        </article>
+
+        <article class="doc-card">
+          <h2>Cómo ingresar al sistema</h2>
+          <p>La forma más habitual es conectarse por SSH desde una terminal.</p>
+          <pre class="doc-code"><code>ssh usuario@IP_DEL_SERVIDOR</code></pre>
+          <ul class="doc-list">
+            <li>en Windows se puede usar PowerShell o Símbolo del sistema</li>
+            <li>en Linux se usa una terminal estándar</li>
+            <li>la primera vez puede pedirse confirmar la huella del servidor</li>
+            <li>la contraseña no se ve al escribir: eso es normal</li>
+          </ul>
+          <p>Para el procedimiento completo, vea la <a href="ssh.html">guía de acceso por SSH</a>.</p>
+        </article>
+
+        <article class="doc-card">
+          <h2>Dónde conviene trabajar</h2>
+          <p>El espacio principal de trabajo es <code>/datos/usuario</code>. Allí conviene guardar:</p>
+          <ul class="doc-list">
+            <li>scripts</li>
+            <li>proyectos activos</li>
+            <li>resultados en curso</li>
+            <li>datos que se usan habitualmente</li>
+          </ul>
+          <p>Una estructura simple ayuda mucho a mantener el orden:</p>
+          <pre class="doc-code"><code>/datos/usuario/proyectos/
+/datos/usuario/scripts/
+/datos/usuario/datos/
+/datos/usuario/resultados/
+/datos/usuario/tmp/</code></pre>
+        </article>
+
+        <article class="doc-card">
+          <h2>Por qué hacer backups</h2>
+          <p>Un backup no es una copia decorativa: sirve para reducir pérdidas de trabajo ante errores humanos, borrados accidentales, cambios no deseados o problemas de hardware.</p>
+          <p>Conviene respaldar especialmente:</p>
+          <ul class="doc-list">
+            <li>documentos importantes</li>
+            <li>scripts y configuraciones relevantes</li>
+            <li>material de tesis, artículos y planillas</li>
+            <li>datos de campo, resultados consolidados y exportaciones de bases de datos</li>
+          </ul>
+        </article>
+
+        <article class="doc-card">
+          <h2>Cómo hacer backups de forma simple</h2>
+          <p>El espacio pensado para resguardo es <code>/backup/users/usuario</code>. No debería usarse como carpeta de trabajo diario.</p>
+          <p>Una práctica básica y recomendable es crear subcarpetas claras y con fecha:</p>
+          <pre class="doc-code"><code>/backup/users/usuario/pc/
+/backup/users/usuario/home_servidor/
+/backup/users/usuario/archivo/
+/backup/users/usuario/laptop_2026-04-18/</code></pre>
+          <ul class="doc-list">
+            <li>copiar solo material importante o estable</li>
+            <li>evitar cachés, descargas innecesarias y archivos temporales</li>
+            <li>no mezclar trabajo activo con archivo o resguardo</li>
+            <li>revisar periódicamente que los respaldos sean legibles y estén bien ubicados</li>
+          </ul>
+        </article>
+
+        <article class="doc-card">
+          <h2>Qué prácticas ayudan a sacarle provecho al servidor</h2>
+          <ul class="doc-list">
+            <li>mantener una estructura simple de carpetas</li>
+            <li>usar nombres cortos y descriptivos</li>
+            <li>evitar espacios y acentos en archivos y directorios</li>
+            <li>separar claramente proyectos activos, resultados y respaldos</li>
+            <li>limpiar archivos temporales o duplicados cuando ya no hagan falta</li>
+            <li>consultar la documentación antes de usar servicios nuevos o rutas sensibles</li>
+          </ul>
+        </article>
+
+        <article class="doc-card">
+          <h2>Qué conviene leer después</h2>
+          <ul class="doc-list">
+            <li><a href="ssh.html">Guía de acceso por SSH</a>: para entrar al servidor y transferir archivos.</li>
+            <li><a href="administracion.html">Backups y administración</a>: para entender mejor resguardo, soporte y operación general.</li>
+            <li><a href="postgresql.html">Guía de PostgreSQL</a>: si necesita conectarse a bases de datos del laboratorio.</li>
+          </ul>
+        </article>
+
+        <p><a class="button button-secondary" href="../index.html">Volver a la intranet</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Administración y soporte: actualice este texto con el correo institucional, la persona de referencia técnica o el canal interno correspondiente.</p>
+      <p>&copy; <span data-current-year></span> Intranet de LaMoGe</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

@@ -78,6 +78,7 @@
         <nav class="site-nav" aria-label="Navegación principal">
           <ul>
             <li><a href="#services">Servicios</a></li>
+            <li><a href="#server-status">Estado</a></li>
             <li><a href="#resources">Recursos</a></li>
             <li><a href="#support">Soporte</a></li>
           </ul>
@@ -117,7 +118,7 @@
 
             <div class="hero-actions">
               <a class="button button-primary" href="#services">Explorar servicios</a>
-              <a class="button button-secondary" href="#resources">Ver recursos técnicos</a>
+              <a class="button button-secondary" href="#server-status">Ver estado del servidor</a>
             </div>
           </div>
 
@@ -141,97 +142,6 @@
                 <dd>Estructura estática, enlaces editables y actualización simple sobre Apache.</dd>
               </div>
             </dl>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <section class="server-status section section-muted" id="server-status" aria-labelledby="server-status-title">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Monitoreo general</p>
-          <h2 id="server-status-title">Estado del servidor</h2>
-          <p>
-            Resumen de disponibilidad de recursos y estado de servicios clave. Los indicadores se leen desde
-            <code>status.json</code> para ofrecer una referencia simple y comprensible del entorno operativo.
-          </p>
-        </div>
-
-        <div class="status-shell" data-status-shell>
-          <div class="status-grid" data-status-metrics>
-            <article class="status-card">
-              <div class="status-card-head">
-                <h3>Memoria disponible</h3>
-                <span class="status-pill">Cargando</span>
-              </div>
-              <p class="status-value">--</p>
-              <div class="status-meter" aria-hidden="true"><span style="width: 0%"></span></div>
-              <p class="status-help">Esperando datos del servidor.</p>
-            </article>
-
-            <article class="status-card">
-              <div class="status-card-head">
-                <h3>Uso de /datos</h3>
-                <span class="status-pill">Cargando</span>
-              </div>
-              <p class="status-value">--</p>
-              <div class="status-meter" aria-hidden="true"><span style="width: 0%"></span></div>
-              <p class="status-help">Esperando datos del servidor.</p>
-            </article>
-
-            <article class="status-card">
-              <div class="status-card-head">
-                <h3>Uso de /backup</h3>
-                <span class="status-pill">Cargando</span>
-              </div>
-              <p class="status-value">--</p>
-              <div class="status-meter" aria-hidden="true"><span style="width: 0%"></span></div>
-              <p class="status-help">Esperando datos del servidor.</p>
-            </article>
-
-            <article class="status-card">
-              <div class="status-card-head">
-                <h3>Uso de /fast</h3>
-                <span class="status-pill">Cargando</span>
-              </div>
-              <p class="status-value">--</p>
-              <div class="status-meter" aria-hidden="true"><span style="width: 0%"></span></div>
-              <p class="status-help">Esperando datos del servidor.</p>
-            </article>
-
-            <article class="status-card status-card-compact">
-              <div class="status-card-head">
-                <h3>Carga del sistema</h3>
-                <span class="status-pill">Cargando</span>
-              </div>
-              <p class="status-value">--</p>
-              <p class="status-help">Esperando datos del servidor.</p>
-            </article>
-
-            <article class="status-card status-card-compact">
-              <div class="status-card-head">
-                <h3>Uptime</h3>
-                <span class="status-pill">Cargando</span>
-              </div>
-              <p class="status-value">--</p>
-              <p class="status-help">Esperando datos del servidor.</p>
-            </article>
-          </div>
-
-          <aside class="status-services-card" aria-labelledby="service-health-title">
-            <div class="status-card-head">
-              <h3 id="service-health-title">Estado de servicios clave</h3>
-              <span class="status-pill">Cargando</span>
-            </div>
-            <ul class="service-health-list" data-service-health-list>
-              <li><span>PostgreSQL</span><strong>--</strong></li>
-              <li><span>Docker</span><strong>--</strong></li>
-              <li><span>GeoServer</span><strong>--</strong></li>
-              <li><span>WebODM</span><strong>--</strong></li>
-              <li><span>Jupyter</span><strong>--</strong></li>
-            </ul>
-            <p class="status-updated" data-status-updated>Última actualización: sin datos.</p>
-            <p class="status-fallback" data-status-fallback hidden>No fue posible cargar el estado del servidor en este momento.</p>
           </aside>
         </div>
       </div>
@@ -576,29 +486,123 @@
       </div>
     </section>
 
+    <section class="server-status section section-muted" id="server-status" aria-labelledby="server-status-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Monitoreo general</p>
+          <h2 id="server-status-title">Estado del servidor</h2>
+          <p>
+            Resumen de disponibilidad de recursos y estado de servicios clave. Los indicadores se leen desde
+            <code>status.json</code> para ofrecer una referencia simple y comprensible del entorno operativo.
+          </p>
+        </div>
+
+        <div class="status-shell" data-status-shell>
+          <div class="status-grid" data-status-metrics>
+            <article class="status-card">
+              <div class="status-card-head">
+                <h3>Memoria disponible</h3>
+                <span class="status-pill">Cargando</span>
+              </div>
+              <p class="status-value">--</p>
+              <div class="status-meter" aria-hidden="true"><span style="width: 0%"></span></div>
+              <p class="status-help">Esperando datos del servidor.</p>
+            </article>
+
+            <article class="status-card">
+              <div class="status-card-head">
+                <h3>Uso de /datos</h3>
+                <span class="status-pill">Cargando</span>
+              </div>
+              <p class="status-value">--</p>
+              <div class="status-meter" aria-hidden="true"><span style="width: 0%"></span></div>
+              <p class="status-help">Esperando datos del servidor.</p>
+            </article>
+
+            <article class="status-card">
+              <div class="status-card-head">
+                <h3>Uso de /backup</h3>
+                <span class="status-pill">Cargando</span>
+              </div>
+              <p class="status-value">--</p>
+              <div class="status-meter" aria-hidden="true"><span style="width: 0%"></span></div>
+              <p class="status-help">Esperando datos del servidor.</p>
+            </article>
+
+            <article class="status-card">
+              <div class="status-card-head">
+                <h3>Uso de /fast</h3>
+                <span class="status-pill">Cargando</span>
+              </div>
+              <p class="status-value">--</p>
+              <div class="status-meter" aria-hidden="true"><span style="width: 0%"></span></div>
+              <p class="status-help">Esperando datos del servidor.</p>
+            </article>
+
+            <article class="status-card status-card-compact">
+              <div class="status-card-head">
+                <h3>Carga del sistema</h3>
+                <span class="status-pill">Cargando</span>
+              </div>
+              <p class="status-value">--</p>
+              <p class="status-help">Esperando datos del servidor.</p>
+            </article>
+
+            <article class="status-card status-card-compact">
+              <div class="status-card-head">
+                <h3>Uptime</h3>
+                <span class="status-pill">Cargando</span>
+              </div>
+              <p class="status-value">--</p>
+              <p class="status-help">Esperando datos del servidor.</p>
+            </article>
+          </div>
+
+          <aside class="status-services-card" aria-labelledby="service-health-title">
+            <div class="status-card-head">
+              <h3 id="service-health-title">Estado de servicios clave</h3>
+              <span class="status-pill">Cargando</span>
+            </div>
+            <ul class="service-health-list" data-service-health-list>
+              <li><span>PostgreSQL</span><strong>--</strong></li>
+              <li><span>Docker</span><strong>--</strong></li>
+              <li><span>GeoServer</span><strong>--</strong></li>
+              <li><span>WebODM</span><strong>--</strong></li>
+              <li><span>Jupyter</span><strong>--</strong></li>
+            </ul>
+            <p class="status-updated" data-status-updated>Última actualización: sin datos.</p>
+            <p class="status-fallback" data-status-fallback hidden>No fue posible cargar el estado del servidor en este momento.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
     <section class="resources section section-muted" id="resources" aria-labelledby="resources-title">
       <div class="container resources-grid">
         <div class="section-heading section-heading-compact">
           <p class="eyebrow">Recursos técnicos</p>
-          <h2 id="resources-title">Documentación, operación y referencia interna</h2>
+          <h2 id="resources-title">Documentación, soporte y usos del servidor</h2>
           <p>
-            Espacio pensado para centralizar documentación estable, lineamientos operativos y referencias de trabajo
-            vinculadas a la infraestructura de LaMoGe.
+            Guías orientadas al uso cotidiano del entorno: cómo ingresar al servidor, dónde trabajar, por qué hacer
+            backups y qué buenas prácticas conviene seguir para aprovechar la infraestructura sin riesgos innecesarios.
           </p>
         </div>
 
         <div class="resource-panels">
           <article class="resource-card">
-            <h3>Base de conocimiento</h3>
-            <p>Manual institucional, preguntas frecuentes, procedimientos de uso y criterios de acceso a servicios.</p>
+            <h3>Usos del servidor</h3>
+            <p>Introducción pensada para usuarios no expertos: acceso, carpetas de trabajo, respaldos y organización básica.</p>
+            <p><a class="card-button card-button-primary" href="docs/usos-servidor.html">Ver guía</a></p>
           </article>
           <article class="resource-card">
-            <h3>Proyectos y datos</h3>
-            <p>Directorios de proyectos activos, responsables técnicos, conjuntos de datos y espacios de colaboración.</p>
+            <h3>Ingreso y acceso remoto</h3>
+            <p>Procedimientos para entrar por SSH desde Windows o Linux, validar el acceso y transferir archivos.</p>
+            <p><a class="card-button card-button-primary" href="docs/ssh.html">Ver acceso SSH</a></p>
           </article>
           <article class="resource-card">
-            <h3>Incorporación y soporte</h3>
-            <p>Guías para nuevas personas integrantes, credenciales, accesos iniciales y rutas de consulta administrativa.</p>
+            <h3>Backups y resguardo</h3>
+            <p>Criterios para distinguir trabajo activo de respaldo, qué conviene guardar y cómo ordenar el archivo personal.</p>
+            <p><a class="card-button card-button-primary" href="docs/administracion.html">Ver backups y soporte</a></p>
           </article>
         </div>
       </div>
@@ -607,14 +611,17 @@
     <section class="support section" id="support" aria-labelledby="support-title">
       <div class="container support-panel">
         <div>
-          <p class="eyebrow">Mantenimiento</p>
-          <h2 id="support-title">Actualización simple y mantenimiento directo</h2>
+          <p class="eyebrow">Soporte</p>
+          <h2 id="support-title">Acompañamiento para el uso cotidiano del entorno</h2>
           <p>
-            El sitio permanece estático y ligero. Los enlaces y textos de cada tarjeta pueden editarse directamente en
-            index.html, y los recursos visuales futuros pueden incorporarse en assets/logos/ sin modificar la estructura general.
+            Si es la primera vez que usa el servidor, conviene comenzar por la guía de usos, luego revisar el acceso
+            por SSH y finalmente consultar la documentación de backups y administración para ordenar mejor el trabajo.
           </p>
         </div>
-        <a class="button button-primary" href="mailto:admin@example.edu">Contactar administración</a>
+        <div class="support-actions">
+          <a class="button button-secondary" href="docs/usos-servidor.html">Guía de inicio</a>
+          <a class="button button-primary" href="mailto:admin@example.edu">Contactar administración</a>
+        </div>
       </div>
     </section>
   </main>

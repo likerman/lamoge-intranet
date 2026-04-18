@@ -129,3 +129,4 @@ cat >"$TMP_FILE" <<EOF
 EOF
 
 mv "$TMP_FILE" "$OUTPUT_FILE"
+chmod 644 "$OUTPUT_FILE"
