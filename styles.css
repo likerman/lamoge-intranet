@@ -67,6 +67,10 @@ a {
   display: none !important;
 }
 
+body.is-locked {
+  overflow: hidden;
+}
+
 /* Layout */
 .container {
   width: min(calc(100% - 2rem), var(--container));
@@ -91,6 +95,17 @@ a {
   border-top: 1px solid rgba(174, 185, 194, 0.55);
   border-bottom: 1px solid rgba(174, 185, 194, 0.55);
   background: linear-gradient(180deg, rgba(245, 247, 248, 0.9), rgba(232, 237, 240, 0.76));
+}
+
+.page-shell {
+  transition: filter 0.18s ease, opacity 0.18s ease;
+}
+
+body.is-locked .page-shell {
+  filter: blur(8px);
+  opacity: 0.42;
+  pointer-events: none;
+  user-select: none;
 }
 
 /* Typography */
@@ -257,6 +272,75 @@ h4 {
   border-radius: var(--radius);
   background: rgba(255, 255, 255, 0.96);
   box-shadow: var(--shadow-sm);
+}
+
+/* Access gate */
+.access-gate {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+  background: rgba(20, 37, 48, 0.36);
+}
+
+body:not(.is-locked) .access-gate {
+  display: none;
+}
+
+.access-gate-dialog {
+  width: min(100%, 31rem);
+  padding: 1.7rem;
+  border: 1px solid rgba(174, 185, 194, 0.7);
+  border-radius: 22px;
+  background: rgba(250, 252, 253, 0.98);
+  box-shadow: 0 28px 60px rgba(20, 31, 40, 0.18);
+}
+
+.access-gate-dialog h2 {
+  margin-bottom: 0.6rem;
+}
+
+.access-gate-text,
+.access-gate-note {
+  color: var(--muted);
+}
+
+.access-gate-text {
+  margin-bottom: 0.85rem;
+}
+
+.access-gate-note {
+  margin-bottom: 1.15rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid rgba(174, 185, 194, 0.42);
+  font-size: 0.95rem;
+}
+
+.access-gate-form {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.access-field input {
+  min-height: 3.1rem;
+}
+
+.access-submit {
+  width: 100%;
+}
+
+.access-feedback {
+  min-height: 1.35rem;
+  margin-bottom: 0;
+  color: #8b2f2f;
+  font-size: 0.94rem;
+  font-weight: 600;
+}
+
+.access-feedback.is-success {
+  color: #355a45;
 }
 
 /* Institutional band */

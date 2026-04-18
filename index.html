@@ -10,9 +10,40 @@
   >
   <link rel="stylesheet" href="styles.css">
 </head>
-<body id="top">
+<body id="top" class="is-locked">
   <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
 
+  <!-- Reemplazar esta compuerta temporal por autenticación real del servidor cuando esté disponible. -->
+  <div class="access-gate" data-access-gate aria-hidden="false">
+    <div class="access-gate-dialog" role="dialog" aria-modal="true" aria-labelledby="access-gate-title" aria-describedby="access-gate-description">
+      <p class="eyebrow">Portal institucional</p>
+      <h2 id="access-gate-title">Acceso restringido</h2>
+      <p id="access-gate-description" class="access-gate-text">
+        Este portal interno de LaMoGe reúne servicios, herramientas y recursos técnicos de uso institucional.
+        Ingrese la clave compartida para continuar.
+      </p>
+      <p class="access-gate-note">Uso exclusivo para personas autorizadas del laboratorio y del entorno institucional asociado.</p>
+
+      <form class="access-gate-form" data-access-form>
+        <label class="search-field access-field" for="shared-password">
+          <span class="search-label">Clave de acceso</span>
+          <input
+            id="shared-password"
+            name="shared-password"
+            type="password"
+            autocomplete="current-password"
+            data-access-input
+            aria-describedby="access-gate-feedback"
+          >
+        </label>
+
+        <button class="button button-primary access-submit" type="submit">Ingresar</button>
+        <p class="access-feedback" id="access-gate-feedback" data-access-feedback aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+
+  <div class="page-shell" data-page-shell>
   <div class="site-banner">
     <div class="container site-banner-inner">
       <p>IDEAN · Instituto de Estudios Andinos</p>
@@ -505,6 +536,7 @@
       <p class="footer-copy">&copy; <span data-current-year></span> Intranet LaMoGe</p>
     </div>
   </footer>
+  </div>
 
   <script src="script.js"></script>
 </body>

@@ -1,9 +1,8 @@
 const currentYear = document.querySelector("[data-current-year]");
-
-if (currentYear) {
-  currentYear.textContent = new Date().getFullYear();
-}
-
+const accessGate = document.querySelector("[data-access-gate]");
+const accessForm = document.querySelector("[data-access-form]");
+const accessInput = document.querySelector("[data-access-input]");
+const accessFeedback = document.querySelector("[data-access-feedback]");
 const serviceSearch = document.querySelector("[data-service-search]");
 const serviceCards = [...document.querySelectorAll("[data-service-card]")];
 const serviceGroups = [...document.querySelectorAll("[data-service-group]")];
@@ -12,13 +11,82 @@ const filterStatus = document.querySelector("[data-filter-status]");
 const noResults = document.querySelector("[data-no-results]");
 const copyButtons = [...document.querySelectorAll("[data-copy-url]")];
 
+// Temporal: esta clave compartida es visible en frontend y no es segura para producción.
+// Reemplazar esta lógica por autenticación real del servidor cuando exista una solución institucional.
+const SHARED_ACCESS_PASSWORD = "lamoge-idean";
+const ACCESS_SESSION_KEY = "lamogeIntranetAccessGranted";
+
 let activeCategory = "all";
+
+if (currentYear) {
+  currentYear.textContent = new Date().getFullYear();
+}
 
 function normalizeText(value) {
   return value
     .toLowerCase()
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "");
+}
+
+function unlockPage() {
+  document.body.classList.remove("is-locked");
+
+  if (accessGate) {
+    accessGate.setAttribute("aria-hidden", "true");
+  }
+}
+
+function lockPage() {
+  document.body.classList.add("is-locked");
+
+  if (accessGate) {
+    accessGate.setAttribute("aria-hidden", "false");
+  }
+}
+
+function setAccessFeedback(message, isSuccess = false) {
+  if (!accessFeedback) {
+    return;
+  }
+
+  accessFeedback.textContent = message;
+  accessFeedback.classList.toggle("is-success", isSuccess);
+}
+
+function initializeAccessGate() {
+  if (!accessGate || !accessForm || !accessInput) {
+    return;
+  }
+
+  const hasSessionAccess = window.sessionStorage.getItem(ACCESS_SESSION_KEY) === "true";
+
+  if (hasSessionAccess) {
+    unlockPage();
+    return;
+  }
+
+  lockPage();
+  window.setTimeout(() => {
+    accessInput.focus();
+  }, 40);
+
+  accessForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const submittedPassword = accessInput.value;
+
+    if (submittedPassword === SHARED_ACCESS_PASSWORD) {
+      window.sessionStorage.setItem(ACCESS_SESSION_KEY, "true");
+      setAccessFeedback("Acceso habilitado.", true);
+      unlockPage();
+      accessForm.reset();
+      return;
+    }
+
+    setAccessFeedback("La clave ingresada no es correcta.");
+    accessInput.select();
+  });
 }
 
 function updateServiceFilters() {
@@ -129,4 +197,5 @@ copyButtons.forEach((button) => {
   });
 });
 
+initializeAccessGate();
 updateServiceFilters();
