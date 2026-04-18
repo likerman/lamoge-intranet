@@ -697,7 +697,8 @@ h4 {
 
 .card-icon {
   position: relative;
-  display: inline-flex;
+  display: inline-grid;
+  place-items: center;
   align-items: center;
   justify-content: center;
   width: 4.2rem;
@@ -710,161 +711,62 @@ h4 {
   overflow: hidden;
 }
 
-.card-icon span {
-  position: absolute;
+.service-glyph {
+  width: 2.55rem;
+  height: 2.55rem;
 }
 
-.icon-label {
-  position: relative;
-  z-index: 2;
-  font-size: 0.82rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
+.service-glyph * {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
-.icon-ring {
-  width: 2.2rem;
-  height: 2.2rem;
-  border: 3px solid #d98032;
-  border-radius: 999px;
-}
-
-.icon-grid {
-  width: 2.2rem;
-  height: 2.2rem;
-  background:
-    linear-gradient(90deg, transparent 31%, rgba(35, 56, 71, 0.22) 31%, rgba(35, 56, 71, 0.22) 35%, transparent 35%, transparent 65%, rgba(35, 56, 71, 0.22) 65%, rgba(35, 56, 71, 0.22) 69%, transparent 69%),
-    linear-gradient(transparent 31%, rgba(35, 56, 71, 0.22) 31%, rgba(35, 56, 71, 0.22) 35%, transparent 35%, transparent 65%, rgba(35, 56, 71, 0.22) 65%, rgba(35, 56, 71, 0.22) 69%, transparent 69%);
-  border-radius: 12px;
-}
-
-.icon-layers::before,
-.icon-layers::after,
-.icon-layers {
-  content: "";
-  display: block;
-  width: 2rem;
-  height: 0.42rem;
-  border-radius: 999px;
-  background: rgba(42, 112, 79, 0.8);
-}
-
-.icon-layers {
-  box-shadow:
-    0 -0.6rem 0 rgba(42, 112, 79, 0.28),
-    0 0.6rem 0 rgba(42, 112, 79, 0.48);
-}
-
-.icon-archive {
-  width: 2rem;
-  height: 1.55rem;
-  border: 2px solid rgba(35, 56, 71, 0.55);
-  border-top-width: 0.5rem;
-  border-radius: 0.35rem;
-}
-
-.icon-console {
-  width: 2.2rem;
-  height: 1.6rem;
-  border: 2px solid rgba(35, 56, 71, 0.55);
-  border-radius: 0.4rem;
-}
-
-.icon-console::before {
-  content: ">";
-  position: absolute;
-  top: 0.05rem;
-  left: 0.35rem;
-  color: rgba(35, 56, 71, 0.72);
-  font-size: 0.95rem;
-  font-weight: 700;
-}
-
-.icon-database,
-.icon-database::before,
-.icon-database::after {
-  content: "";
-  display: block;
-  width: 2rem;
-  height: 0.6rem;
-  border: 2px solid rgba(35, 56, 71, 0.52);
-  border-radius: 999px / 60%;
-  background: rgba(255, 255, 255, 0.55);
-}
-
-.icon-database {
-  box-shadow:
-    0 0.55rem 0 rgba(255, 255, 255, 0.65),
-    0 1.1rem 0 rgba(255, 255, 255, 0.75);
-}
-
-.icon-terminal::before,
-.icon-terminal::after {
-  position: absolute;
-  color: rgba(35, 56, 71, 0.72);
-  font-weight: 800;
-}
-
-.icon-terminal::before {
-  content: "$";
-  left: 0.92rem;
-  top: 0.9rem;
-  font-size: 1.2rem;
-}
-
-.icon-terminal::after {
-  content: "_";
-  right: 1rem;
-  bottom: 0.7rem;
-  font-size: 1.15rem;
-}
-
-.icon-doc {
-  width: 1.6rem;
-  height: 2rem;
-  border: 2px solid rgba(35, 56, 71, 0.52);
-  border-radius: 0.25rem;
-}
-
-.icon-doc::before,
-.icon-doc::after {
-  content: "";
-  position: absolute;
-  left: 1.35rem;
-  width: 0.9rem;
-  height: 2px;
-  background: rgba(35, 56, 71, 0.34);
-}
-
-.icon-doc::before {
-  top: 1.35rem;
-}
-
-.icon-doc::after {
-  top: 1.72rem;
+.service-glyph .service-dot {
+  fill: currentColor;
+  stroke: none;
 }
 
 .card-icon-jupyter {
   background: linear-gradient(180deg, #fffaf5, #f1eee7);
+  color: #9a6429;
 }
 
 .card-icon-webodm {
   background: linear-gradient(180deg, #f8fbfc, #ecf2f2);
+  color: #345d66;
 }
 
 .card-icon-geoserver {
   background: linear-gradient(180deg, #f8fbf8, #eef4ef);
+  color: #3d6a4e;
 }
 
 .card-icon-dronedb {
   background: linear-gradient(180deg, #fbfaf7, #f0ece4);
+  color: #6e5a36;
 }
 
-.card-icon-webmin,
-.card-icon-postgresql,
-.card-icon-ssh,
+.card-icon-webmin {
+  background: linear-gradient(180deg, #fafbfc, #edf1f4);
+  color: #35506b;
+}
+
+.card-icon-postgresql {
+  background: linear-gradient(180deg, #f9fbfc, #edf2f6);
+  color: #415d7a;
+}
+
+.card-icon-ssh {
+  background: linear-gradient(180deg, #fafbfc, #edf1f4);
+  color: #2e4d62;
+}
+
 .card-icon-docs {
   background: linear-gradient(180deg, #fafbfc, #edf1f4);
+  color: #5a6470;
 }
 
 .service-card > p {
