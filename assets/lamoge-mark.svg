@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">LaMoGe mark</title>
+  <desc id="desc">Abstract geometric symbol for the LaMoGe intranet.</desc>
+  <defs>
+    <linearGradient id="g" x1="12" x2="84" y1="12" y2="84" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#005a78"/>
+      <stop offset="1" stop-color="#2b7c93"/>
+    </linearGradient>
+  </defs>
+  <rect width="96" height="96" rx="24" fill="#eaf0f4"/>
+  <path fill="url(#g)" d="M24 68V20h12v38h20v10H24Zm38 0V20h12v48H62Z"/>
+  <circle cx="72" cy="72" r="8" fill="#8ec1ce"/>
+</svg>

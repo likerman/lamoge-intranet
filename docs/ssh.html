@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guía de SSH | Intranet de LaMoGe</title>
+  <meta
+    name="description"
+    content="Guía interna de acceso por SSH para la infraestructura de LaMoGe."
+  >
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Volver al inicio de la intranet de LaMoGe">
+        <img src="../assets/lamoge-logo.png" alt="Logo de LaMoGe" width="108" height="108">
+        <span class="brand-text">
+          <span class="brand-name">Intranet LaMoGe</span>
+          <span class="brand-subtitle">Portal de acceso a servicios y documentación del laboratorio</span>
+        </span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main-content" class="doc-page">
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Documentación</p>
+          <h1>Guía de acceso por SSH</h1>
+          <p>
+            Este documento resume el procedimiento recomendado para solicitar acceso, cargar claves públicas y
+            conectarse a los servidores del laboratorio de forma segura.
+          </p>
+        </div>
+
+        <article class="doc-card">
+          <h2>Requisitos previos</h2>
+          <ul class="doc-list">
+            <li>Contar con autorización previa para el servidor correspondiente.</li>
+            <li>Disponer de una clave pública registrada por administración.</li>
+            <li>Conocer el nombre de usuario asignado y el hostname de destino.</li>
+          </ul>
+        </article>
+
+        <article class="doc-card">
+          <h2>Comando de conexión</h2>
+          <pre class="doc-code"><code>ssh usuario@servidor</code></pre>
+          <p>Agregue aquí variantes con puerto específico, proxy o archivos de configuración si fueran necesarias.</p>
+        </article>
+
+        <article class="doc-card">
+          <h2>Seguridad operativa</h2>
+          <ul class="doc-list">
+            <li>No comparta credenciales ni claves privadas.</li>
+            <li>Describa el procedimiento para rotación de claves y revocación de accesos.</li>
+            <li>Documente restricciones de IP, VPN o segmentación de red si aplican.</li>
+          </ul>
+        </article>
+
+        <p><a class="button button-secondary" href="../index.html">Volver a la intranet</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Administración y soporte: actualice este texto con el correo institucional, la persona de referencia técnica o el canal interno correspondiente.</p>
+      <p>&copy; <span data-current-year></span> Intranet de LaMoGe</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+# OS / editor files
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.swo
+
+# Local logs
+*.log
+
+# Archive leftovers
+*.tmp
+*.bak

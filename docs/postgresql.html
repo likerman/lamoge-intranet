@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guía de PostgreSQL | Intranet de LaMoGe</title>
+  <meta
+    name="description"
+    content="Guía interna de acceso y uso de PostgreSQL en la infraestructura de LaMoGe."
+  >
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Volver al inicio de la intranet de LaMoGe">
+        <img src="../assets/lamoge-logo.png" alt="Logo de LaMoGe" width="108" height="108">
+        <span class="brand-text">
+          <span class="brand-name">Intranet LaMoGe</span>
+          <span class="brand-subtitle">Portal de acceso a servicios y documentación del laboratorio</span>
+        </span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main-content" class="doc-page">
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Documentación</p>
+          <h1>Guía de acceso y uso de PostgreSQL</h1>
+          <p>
+            Este documento reúne la información básica para solicitar acceso, conectarse a las bases de datos y
+            registrar parámetros operativos relevantes. Sustituya los valores de ejemplo por la información real
+            del entorno.
+          </p>
+        </div>
+
+        <article class="doc-card">
+          <h2>Datos de conexión</h2>
+          <ul class="doc-list">
+            <li><strong>Servidor:</strong> completar con hostname o IP.</li>
+            <li><strong>Puerto:</strong> completar si difiere del puerto estándar.</li>
+            <li><strong>Base de datos:</strong> indicar nombre de la base asignada.</li>
+            <li><strong>Usuario:</strong> especificar usuario o rol provisto.</li>
+          </ul>
+        </article>
+
+        <article class="doc-card">
+          <h2>Acceso desde línea de comandos</h2>
+          <p>Use un bloque como referencia para documentar la forma recomendada de conexión:</p>
+          <pre class="doc-code"><code>psql -h HOST -p PUERTO -U USUARIO -d BASE_DE_DATOS</code></pre>
+        </article>
+
+        <article class="doc-card">
+          <h2>Buenas prácticas</h2>
+          <ul class="doc-list">
+            <li>Registrar quién administra cada base y el propósito de cada esquema.</li>
+            <li>Indicar políticas de respaldo y retención de datos.</li>
+            <li>Documentar restricciones de red y procedimientos de recuperación.</li>
+          </ul>
+        </article>
+
+        <p><a class="button button-secondary" href="../index.html">Volver a la intranet</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Administración y soporte: actualice este texto con el correo institucional, la persona de referencia técnica o el canal interno correspondiente.</p>
+      <p>&copy; <span data-current-year></span> Intranet de LaMoGe</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
