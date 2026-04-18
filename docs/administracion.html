@@ -32,13 +32,13 @@
           <p class="eyebrow">Documentación</p>
           <h1>Diagnóstico del servidor y procedimientos administrativos</h1>
           <p>
-            Reúna aquí los pasos de verificación, incidentes frecuentes, responsables operativos y procedimientos
-            de mantenimiento para la infraestructura del laboratorio.
+            Esta guía resume criterios básicos de operación, verificación y respaldo para la infraestructura del
+            laboratorio, con foco en el uso correcto de cuentas personales, rutas de trabajo y carpetas de backup.
           </p>
         </div>
 
         <article class="doc-card">
-          <h2>Chequeos básicos</h2>
+          <h2>Chequeos básicos del entorno</h2>
           <ul class="doc-list">
             <li>Disponibilidad de CPU, memoria, disco y conectividad.</li>
             <li>Estado de servicios críticos y puertos publicados.</li>
@@ -47,20 +47,90 @@
         </article>
 
         <article class="doc-card">
-          <h2>Procedimientos sugeridos</h2>
+          <h2>Rutas de trabajo y resguardo</h2>
+          <p>Para cada usuario existen dos espacios con funciones distintas:</p>
           <ul class="doc-list">
-            <li>Reinicio controlado de servicios.</li>
-            <li>Validación posterior a actualizaciones o cambios de configuración.</li>
-            <li>Escalamiento de incidentes y comunicación a usuarios afectados.</li>
+            <li><code>/datos/usuario</code>: trabajo activo, proyectos en curso, scripts, resultados y datos de uso cotidiano.</li>
+            <li><code>/backup/users/usuario</code>: copias de seguridad, archivo de versiones estables y resguardo de información importante.</li>
+          </ul>
+          <p>La carpeta de backup no debería utilizarse como espacio de trabajo habitual.</p>
+        </article>
+
+        <article class="doc-card">
+          <h2>Qué conviene respaldar</h2>
+          <ul class="doc-list">
+            <li>Documentos importantes, planillas, manuscritos y materiales de tesis o artículos.</li>
+            <li>Scripts, configuraciones relevantes y proyectos en curso.</li>
+            <li>Exportaciones de bases de datos y resultados consolidados.</li>
+            <li>Fotografías, datos de campo y material técnico difícil de reproducir.</li>
+            <li>Copias del contenido importante de la computadora personal o del home del servidor.</li>
           </ul>
         </article>
 
         <article class="doc-card">
-          <h2>Referencias administrativas</h2>
+          <h2>Qué no conviene respaldar</h2>
+          <ul class="doc-list">
+            <li>Carpetas temporales o de trabajo transitorio.</li>
+            <li>Cachés, descargas innecesarias y archivos duplicados.</li>
+            <li>Programas instalados o material que pueda regenerarse fácilmente.</li>
+            <li>Resultados intermedios irrelevantes o archivos sin valor operativo.</li>
+          </ul>
+        </article>
+
+        <article class="doc-card">
+          <h2>Organización sugerida para backups</h2>
+          <p>Se recomienda guardar los respaldos dentro de subcarpetas claras, con fecha o propósito bien identificable.</p>
+          <pre class="doc-code"><code>/backup/users/ftapia/laptop_2026-04-17/
+/backup/users/ftapia/documentos/
+/backup/users/ftapia/home_servidor/
+/backup/users/ftapia/archivo/</code></pre>
+          <p>Una estructura consistente facilita revisiones, limpieza y recuperación ante incidentes.</p>
+        </article>
+
+        <article class="doc-card">
+          <h2>Procedimiento básico de backup manual</h2>
+          <p>Como criterio operativo general, el usuario debería:</p>
+          <ul class="doc-list">
+            <li>Ordenar previamente la información relevante dentro de su carpeta de trabajo.</li>
+            <li>Crear una carpeta de backup con nombre descriptivo o fecha.</li>
+            <li>Copiar allí solo la información importante y estable.</li>
+            <li>Verificar que el contenido pueda listarse y recuperarse correctamente.</li>
+          </ul>
+          <pre class="doc-code"><code>mkdir -p /backup/users/usuario/laptop_2026-04-17
+ls -lah /backup/users/usuario
+
+# Adaptar luego este procedimiento a los comandos de copia o sincronización
+# definidos por administración para cada caso.</code></pre>
+        </article>
+
+        <article class="doc-card">
+          <h2>Buenas prácticas operativas</h2>
+          <ul class="doc-list">
+            <li>No mezclar trabajo activo con material archivado o de resguardo.</li>
+            <li>Usar nombres cortos, descriptivos y sin espacios ni acentos.</li>
+            <li>Eliminar archivos temporales o duplicados que no sea necesario conservar.</li>
+            <li>Conservar una estructura de carpetas predecible para simplificar soporte y recuperación.</li>
+            <li>Documentar procedimientos especiales de respaldo cuando un proyecto tenga requisitos propios.</li>
+          </ul>
+        </article>
+
+        <article class="doc-card">
+          <h2>Procedimientos administrativos sugeridos</h2>
+          <ul class="doc-list">
+            <li>Reinicio controlado de servicios críticos cuando esté justificado.</li>
+            <li>Validación posterior a cambios de configuración, actualizaciones o tareas de mantenimiento.</li>
+            <li>Escalamiento de incidentes y comunicación a usuarios afectados cuando haya impacto operativo.</li>
+            <li>Revisión periódica de uso de disco en <code>/datos</code> y en los espacios de backup.</li>
+          </ul>
+        </article>
+
+        <article class="doc-card">
+          <h2>Referencias administrativas a mantener actualizadas</h2>
           <ul class="doc-list">
             <li>Listado de responsables técnicos y suplencias.</li>
             <li>Calendario de mantenimiento preventivo.</li>
-            <li>Ubicación de respaldos, inventario y accesos privilegiados.</li>
+            <li>Ubicación de respaldos institucionales y accesos privilegiados.</li>
+            <li>Procedimientos de recuperación ante incidentes y canales de contacto.</li>
           </ul>
         </article>
 

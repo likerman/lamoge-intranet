@@ -1,0 +1,20 @@
+{
+  "memory_total_gb": 128,
+  "memory_available_gb": 74.6,
+  "datos_total_tb": 24,
+  "datos_used_tb": 14.8,
+  "backup_total_tb": 32,
+  "backup_used_tb": 21.9,
+  "fast_total_tb": 4,
+  "fast_used_gb": 1180,
+  "load_average_1m": 2.43,
+  "uptime_human": "38 días, 7 horas",
+  "updated_at": "18/04/2026 14:20",
+  "services": {
+    "postgresql": "up",
+    "docker": "up",
+    "geoserver": "up",
+    "webodm": "degraded",
+    "jupyter": "up"
+  }
+}

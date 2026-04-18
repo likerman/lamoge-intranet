@@ -146,6 +146,97 @@
       </div>
     </section>
 
+    <section class="server-status section section-muted" id="server-status" aria-labelledby="server-status-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Monitoreo general</p>
+          <h2 id="server-status-title">Estado del servidor</h2>
+          <p>
+            Resumen de disponibilidad de recursos y estado de servicios clave. Los indicadores se leen desde
+            <code>status.json</code> para ofrecer una referencia simple y comprensible del entorno operativo.
+          </p>
+        </div>
+
+        <div class="status-shell" data-status-shell>
+          <div class="status-grid" data-status-metrics>
+            <article class="status-card">
+              <div class="status-card-head">
+                <h3>Memoria disponible</h3>
+                <span class="status-pill">Cargando</span>
+              </div>
+              <p class="status-value">--</p>
+              <div class="status-meter" aria-hidden="true"><span style="width: 0%"></span></div>
+              <p class="status-help">Esperando datos del servidor.</p>
+            </article>
+
+            <article class="status-card">
+              <div class="status-card-head">
+                <h3>Uso de /datos</h3>
+                <span class="status-pill">Cargando</span>
+              </div>
+              <p class="status-value">--</p>
+              <div class="status-meter" aria-hidden="true"><span style="width: 0%"></span></div>
+              <p class="status-help">Esperando datos del servidor.</p>
+            </article>
+
+            <article class="status-card">
+              <div class="status-card-head">
+                <h3>Uso de /backup</h3>
+                <span class="status-pill">Cargando</span>
+              </div>
+              <p class="status-value">--</p>
+              <div class="status-meter" aria-hidden="true"><span style="width: 0%"></span></div>
+              <p class="status-help">Esperando datos del servidor.</p>
+            </article>
+
+            <article class="status-card">
+              <div class="status-card-head">
+                <h3>Uso de /fast</h3>
+                <span class="status-pill">Cargando</span>
+              </div>
+              <p class="status-value">--</p>
+              <div class="status-meter" aria-hidden="true"><span style="width: 0%"></span></div>
+              <p class="status-help">Esperando datos del servidor.</p>
+            </article>
+
+            <article class="status-card status-card-compact">
+              <div class="status-card-head">
+                <h3>Carga del sistema</h3>
+                <span class="status-pill">Cargando</span>
+              </div>
+              <p class="status-value">--</p>
+              <p class="status-help">Esperando datos del servidor.</p>
+            </article>
+
+            <article class="status-card status-card-compact">
+              <div class="status-card-head">
+                <h3>Uptime</h3>
+                <span class="status-pill">Cargando</span>
+              </div>
+              <p class="status-value">--</p>
+              <p class="status-help">Esperando datos del servidor.</p>
+            </article>
+          </div>
+
+          <aside class="status-services-card" aria-labelledby="service-health-title">
+            <div class="status-card-head">
+              <h3 id="service-health-title">Estado de servicios clave</h3>
+              <span class="status-pill">Cargando</span>
+            </div>
+            <ul class="service-health-list" data-service-health-list>
+              <li><span>PostgreSQL</span><strong>--</strong></li>
+              <li><span>Docker</span><strong>--</strong></li>
+              <li><span>GeoServer</span><strong>--</strong></li>
+              <li><span>WebODM</span><strong>--</strong></li>
+              <li><span>Jupyter</span><strong>--</strong></li>
+            </ul>
+            <p class="status-updated" data-status-updated>Última actualización: sin datos.</p>
+            <p class="status-fallback" data-status-fallback hidden>No fue posible cargar el estado del servidor en este momento.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
     <section class="services section" id="services" aria-labelledby="services-title">
       <div class="container">
         <div class="section-heading">

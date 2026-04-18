@@ -32,32 +32,151 @@
           <p class="eyebrow">Documentación</p>
           <h1>Guía de acceso por SSH</h1>
           <p>
-            Este documento resume el procedimiento recomendado para solicitar acceso, cargar claves públicas y
-            conectarse a los servidores del laboratorio de forma segura.
+            Esta guía reúne el procedimiento recomendado para acceder al servidor de LaMoGe desde Windows o Linux,
+            organizar el trabajo dentro de la cuenta asignada y utilizar de forma correcta el espacio de respaldo.
           </p>
         </div>
 
         <article class="doc-card">
-          <h2>Requisitos previos</h2>
+          <h2>Datos necesarios antes del primer acceso</h2>
           <ul class="doc-list">
-            <li>Contar con autorización previa para el servidor correspondiente.</li>
-            <li>Disponer de una clave pública registrada por administración.</li>
-            <li>Conocer el nombre de usuario asignado y el hostname de destino.</li>
+            <li>Dirección IP o nombre del servidor.</li>
+            <li>Nombre de usuario asignado por administración.</li>
+            <li>Contraseña inicial o mecanismo de acceso definido para la cuenta.</li>
+            <li>Ruta de la carpeta de trabajo y de la carpeta privada de backup.</li>
+          </ul>
+          <pre class="doc-code"><code>Servidor: 157.92.29.231
+Usuario: usuario
+Acceso SSH: ssh usuario@157.92.29.231
+Carpeta de trabajo: /datos/usuario
+Carpeta de backup: /backup/users/usuario</code></pre>
+        </article>
+
+        <article class="doc-card">
+          <h2>Primer acceso desde Windows</h2>
+          <p>Windows 10 y Windows 11 incluyen cliente SSH, por lo que no hace falta instalar software adicional para conectarse por terminal.</p>
+          <ol class="doc-list">
+            <li>Abrir PowerShell o Símbolo del sistema.</li>
+            <li>Ejecutar el comando de conexión provisto por administración.</li>
+            <li>Confirmar la huella del servidor la primera vez escribiendo <code>yes</code>.</li>
+            <li>Ingresar la contraseña cuando sea solicitada. Aunque no se vean caracteres en pantalla, el sistema sí la está recibiendo.</li>
+            <li>Si el sistema lo pide, cambiar la contraseña inicial en el primer acceso.</li>
+          </ol>
+          <pre class="doc-code"><code>ssh usuario@IP_DEL_SERVIDOR
+
+# Ejemplo
+ssh ftapia@157.92.29.231</code></pre>
+        </article>
+
+        <article class="doc-card">
+          <h2>Acceso desde Linux</h2>
+          <p>En Linux el acceso por SSH se realiza del mismo modo, desde una terminal estándar del sistema.</p>
+          <pre class="doc-code"><code>ssh usuario@IP_DEL_SERVIDOR
+
+# Ejemplo
+ssh ftapia@157.92.29.231</code></pre>
+          <ul class="doc-list">
+            <li>Si aparece un pedido de confirmación de la huella, revisar que el servidor sea el esperado y confirmar solo si corresponde.</li>
+            <li>Si la cuenta fue entregada con contraseña inicial, es recomendable cambiarla apenas se complete el primer ingreso.</li>
+            <li>Cuando se definan claves públicas o archivos de configuración SSH institucionales, esta guía debería actualizarse con ese procedimiento.</li>
           </ul>
         </article>
 
         <article class="doc-card">
-          <h2>Comando de conexión</h2>
-          <pre class="doc-code"><code>ssh usuario@servidor</code></pre>
-          <p>Agregue aquí variantes con puerto específico, proxy o archivos de configuración si fueran necesarias.</p>
+          <h2>Cambio de contraseña</h2>
+          <p>Si la cuenta usa contraseña, el cambio puede realizarse dentro del servidor con el siguiente comando:</p>
+          <pre class="doc-code"><code>passwd</code></pre>
+          <p>El sistema pedirá la contraseña actual y luego la nueva contraseña dos veces. Se recomienda una longitud mínima de 12 caracteres con combinación de mayúsculas, minúsculas, números y símbolos.</p>
         </article>
 
         <article class="doc-card">
-          <h2>Seguridad operativa</h2>
+          <h2>Espacios disponibles para cada usuario</h2>
+          <p>Cada cuenta dispone de dos ubicaciones principales con funciones distintas.</p>
           <ul class="doc-list">
-            <li>No comparta credenciales ni claves privadas.</li>
-            <li>Describa el procedimiento para rotación de claves y revocación de accesos.</li>
-            <li>Documente restricciones de IP, VPN o segmentación de red si aplican.</li>
+            <li><code>/datos/usuario</code>: espacio de trabajo habitual para proyectos activos, scripts, resultados y datos de uso frecuente.</li>
+            <li><code>/backup/users/usuario</code>: espacio privado de respaldo para copias de seguridad, versiones archivadas y resguardo de información importante.</li>
+          </ul>
+          <pre class="doc-code"><code>/datos/ftapia
+/backup/users/ftapia</code></pre>
+        </article>
+
+        <article class="doc-card">
+          <h2>Comandos básicos dentro del servidor</h2>
+          <pre class="doc-code"><code>pwd                  # ver carpeta actual
+ls -lah              # listar archivos con detalle
+cd                   # volver al directorio personal
+mkdir nombre_carpeta # crear carpeta
+cd nombre_carpeta    # entrar a una carpeta
+cd ..                # subir un nivel
+touch archivo.txt    # crear archivo vacío
+rm archivo.txt       # eliminar archivo
+rmdir carpeta        # eliminar carpeta vacía
+rm -r carpeta        # eliminar carpeta con contenido</code></pre>
+          <p>El comando <code>rm -r</code> debe usarse con cuidado, especialmente fuera del espacio personal de trabajo.</p>
+        </article>
+
+        <article class="doc-card">
+          <h2>Verificaciones mínimas después del acceso</h2>
+          <p>Una vez que la cuenta fue creada o entregada, conviene validar que el acceso y las rutas principales funcionen correctamente.</p>
+          <pre class="doc-code"><code>pwd
+ls -lah
+mkdir prueba_acceso
+rm -r prueba_acceso
+mkdir -p /backup/users/usuario/prueba
+ls -lah /backup/users/usuario</code></pre>
+        </article>
+
+        <article class="doc-card">
+          <h2>Transferencia de archivos desde Windows</h2>
+          <p>Para subir o bajar archivos desde una PC con Windows se recomienda WinSCP mediante SFTP.</p>
+          <ul class="doc-list">
+            <li>Protocolo: <code>SFTP</code></li>
+            <li>Host name: IP o nombre del servidor</li>
+            <li>Puerto: <code>22</code></li>
+            <li>User name: nombre de usuario asignado</li>
+            <li>Password: contraseña correspondiente</li>
+          </ul>
+          <p>Las rutas de uso más frecuentes son <code>/datos/usuario</code> para trabajo activo y <code>/backup/users/usuario</code> para respaldos.</p>
+        </article>
+
+        <article class="doc-card">
+          <h2>Buenas prácticas de organización</h2>
+          <p>Se recomienda mantener una estructura simple y consistente dentro de cada cuenta.</p>
+          <pre class="doc-code"><code>/datos/usuario/proyectos/
+/datos/usuario/scripts/
+/datos/usuario/datos/
+/datos/usuario/resultados/
+/datos/usuario/tmp/
+
+/backup/users/usuario/pc/
+/backup/users/usuario/home_servidor/
+/backup/users/usuario/archivo/</code></pre>
+          <ul class="doc-list">
+            <li>Usar nombres de archivo descriptivos y breves.</li>
+            <li>Evitar espacios y acentos en nombres de carpetas o archivos.</li>
+            <li>Agregar fechas cuando ayuden a identificar versiones o respaldos.</li>
+            <li>No mezclar trabajo activo con copias de seguridad.</li>
+          </ul>
+        </article>
+
+        <article class="doc-card">
+          <h2>Errores comunes</h2>
+          <ul class="doc-list">
+            <li><strong>Permission denied</strong>: suele indicar usuario, contraseña o permisos incorrectos, o intento de escritura en una ruta no autorizada.</li>
+            <li><strong>Connection refused</strong>: puede señalar un problema de red, una IP incorrecta o un servicio no disponible.</li>
+            <li><strong>Host key verification failed</strong>: consultar con administración antes de eliminar huellas previas o continuar.</li>
+            <li>Si la contraseña no se ve al escribir, el comportamiento es normal en terminales SSH.</li>
+          </ul>
+        </article>
+
+        <article class="doc-card">
+          <h2>Seguridad operativa básica</h2>
+          <ul class="doc-list">
+            <li>No compartir credenciales ni claves privadas con otras personas.</li>
+            <li>Cambiar la contraseña inicial en el primer acceso si aplica.</li>
+            <li>Trabajar habitualmente dentro de <code>/datos/usuario</code>.</li>
+            <li>Usar <code>/backup/users/usuario</code> solo para respaldos y resguardo.</li>
+            <li>Realizar backups periódicos de trabajos importantes y de la computadora personal.</li>
           </ul>
         </article>
 
