@@ -14,6 +14,17 @@ El proyecto funciona como pagina de inicio para servicios internos, documentacio
 - `assets/`: imagenes y recursos estaticos.
 - `lamoge_logo.pdf`: archivo fuente del logo provisto para referencia.
 
+Sugerencia para futuras incorporaciones de logos:
+
+- `assets/logos/jupyterlab.svg`
+- `assets/logos/webodm.svg`
+- `assets/logos/geoserver.svg`
+- `assets/logos/dronedb.svg`
+- `assets/logos/webmin.svg`
+- `assets/logos/postgresql.svg`
+- `assets/logos/ssh.svg`
+- `assets/logos/documentacion.svg`
+
 ## Como editar contenido
 
 ### Cambiar textos

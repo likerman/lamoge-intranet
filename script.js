@@ -59,7 +59,7 @@ function updateServiceFilters() {
   const labels = {
     all: "todos los accesos",
     servicios: "los servicios de trabajo",
-    administracion: "los accesos de administración",
+    administracion: "los accesos de administración y soporte",
   };
 
   if (visibleCards === 0) {

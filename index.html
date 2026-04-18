@@ -3,99 +3,126 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Intranet de LaMoGe</title>
+  <title>Intranet LaMoGe | Portal institucional</title>
   <meta
     name="description"
-    content="Portal interno de LaMoGe con acceso rápido a servicios, recursos y avisos del laboratorio."
+    content="Portal institucional de acceso a servicios, herramientas y recursos técnicos de LaMoGe, Laboratorio de Modelado Análogo del IDEAN."
   >
   <link rel="stylesheet" href="styles.css">
 </head>
 <body id="top">
   <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
 
+  <div class="site-banner">
+    <div class="container site-banner-inner">
+      <p>IDEAN · Instituto de Estudios Andinos</p>
+      <p>Infraestructura de investigación y servicios técnicos</p>
+    </div>
+  </div>
+
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="Inicio de la intranet de LaMoGe">
         <img src="assets/lamoge-logo.png" alt="Logo de LaMoGe" width="108" height="108">
         <span class="brand-text">
+          <span class="brand-kicker">Instituto de Estudios Andinos</span>
           <span class="brand-name">Intranet LaMoGe</span>
-          <span class="brand-subtitle">Portal de acceso a servicios y documentación del laboratorio</span>
+          <span class="brand-subtitle">Portal institucional de servicios del Laboratorio de Modelado Análogo</span>
         </span>
       </a>
 
-      <nav class="site-nav" aria-label="Navegación principal">
-        <ul>
-          <li><a href="#services">Servicios</a></li>
-          <li><a href="#resources">Recursos</a></li>
-          <li><a href="#support">Soporte</a></li>
-        </ul>
-      </nav>
+      <div class="header-side">
+        <p class="header-context">Portal interno de infraestructura científica</p>
+        <nav class="site-nav" aria-label="Navegación principal">
+          <ul>
+            <li><a href="#services">Servicios</a></li>
+            <li><a href="#resources">Recursos</a></li>
+            <li><a href="#support">Soporte</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
 
   <main id="main-content">
-    <section class="access-notice" aria-label="Aviso de acceso">
-      <div class="container access-notice-inner">
-        <strong>Uso restringido:</strong>
-        <span>esta intranet está destinada a personas autorizadas y el acceso a los servicios puede requerir credenciales institucionales.</span>
+    <section class="access-notice" aria-label="Aviso de acceso restringido">
+      <div class="container">
+        <div class="access-notice-inner">
+          <span class="notice-label">Acceso restringido</span>
+          <p>Uso exclusivo para personas autorizadas. El acceso a los servicios y recursos técnicos requiere credenciales institucionales y autorización previa.</p>
+        </div>
       </div>
     </section>
 
     <section class="hero" aria-labelledby="hero-title">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Portal institucional</p>
-          <h1 id="hero-title">LaMoGe intranet para investigación, docencia y operación del laboratorio</h1>
-          <p class="hero-text">
-            Centraliza accesos a plataformas internas, documentación técnica, recursos de cómputo y herramientas
-            de administración. El diseño prioriza claridad, mantenimiento simple y acceso rápido a los servicios
-            de uso cotidiano.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#services">Ver servicios</a>
-            <a class="button button-secondary" href="#resources">Ver recursos</a>
-          </div>
-        </div>
+      <div class="container hero-shell">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Infraestructura científica y técnica</p>
+            <h1 id="hero-title">Intranet LaMoGe</h1>
+            <p class="hero-subtitle">Laboratorio de Modelado Análogo, IDEAN</p>
+            <p class="hero-text">
+              Portal interno de acceso a servicios, herramientas y recursos técnicos alojados en el servidor de LaMoGe.
+              Reúne plataformas de trabajo, documentación operativa y accesos de administración en una interfaz clara,
+              sobria y preparada para mantenimiento directo como sitio estático.
+            </p>
 
-        <aside class="hero-panel" aria-labelledby="panel-title">
-          <h2 id="panel-title">Información rápida</h2>
-          <ul class="highlights" aria-label="Aspectos destacados de la intranet">
-            <li>
-              <strong>Novedades</strong>
-              <span>Utilice este espacio para avisos, mantenimientos programados o actividades próximas.</span>
-            </li>
-            <li>
-              <strong>Contactos</strong>
-              <span>Incluya referencias de administración, soporte técnico y responsables de infraestructura.</span>
-            </li>
-            <li>
-              <strong>Estado</strong>
-              <span>Reserve este bloque para el estado de los servicios, reservas o actualizaciones breves.</span>
-            </li>
-          </ul>
-        </aside>
+            <ul class="hero-highlights" aria-label="Características del portal">
+              <li>Acceso centralizado a plataformas de trabajo y administración</li>
+              <li>Documentación técnica organizada para operación cotidiana</li>
+              <li>Mantenimiento directo sobre archivos estáticos y enlaces editables</li>
+            </ul>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="#services">Explorar servicios</a>
+              <a class="button button-secondary" href="#resources">Ver recursos técnicos</a>
+            </div>
+          </div>
+
+          <aside class="hero-panel" aria-labelledby="panel-title">
+            <div class="hero-panel-heading">
+              <p class="eyebrow">Referencia rápida</p>
+              <h2 id="panel-title">Entorno operativo</h2>
+            </div>
+
+            <dl class="hero-facts">
+              <div>
+                <dt>Ámbito</dt>
+                <dd>Infraestructura interna para investigación, procesamiento, administración y soporte técnico.</dd>
+              </div>
+              <div>
+                <dt>Acceso</dt>
+                <dd>Servicios disponibles mediante red institucional, credenciales autorizadas o documentación interna.</dd>
+              </div>
+              <div>
+                <dt>Mantenimiento</dt>
+                <dd>Estructura estática, enlaces editables y actualización simple sobre Apache.</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
       </div>
     </section>
 
     <section class="services section" id="services" aria-labelledby="services-title">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">Servicios</p>
-          <h2 id="services-title">Accesos rápidos a plataformas y documentación interna</h2>
+          <p class="eyebrow">Accesos institucionales</p>
+          <h2 id="services-title">Servicios y herramientas del servidor LaMoGe</h2>
           <p>
-            Cada tarjeta está preparada para enlazar a herramientas, guías y paneles del entorno interno de
-            LaMoGe. Reemplace los enlaces de ejemplo por las URL reales cuando estén disponibles.
+            La portada organiza los accesos por tipo de uso para facilitar tareas operativas, técnicas y de soporte.
+            Todas las URL permanecen visibles y editables directamente en este archivo.
           </p>
         </div>
 
         <div class="service-tools" aria-label="Herramientas para filtrar servicios">
           <label class="search-field" for="service-search">
-            <span class="search-label">Buscar servicio</span>
+            <span class="search-label">Buscar por nombre, categoría o función</span>
             <input
               id="service-search"
               name="service-search"
               type="search"
-              placeholder="Buscar por nombre, categoría o descripción"
+              placeholder="Ej.: Jupyter, bases de datos, administración"
               autocomplete="off"
               data-service-search
             >
@@ -103,8 +130,8 @@
 
           <div class="filter-group" role="group" aria-label="Filtrar por categoría">
             <button class="filter-chip is-active" type="button" data-category-filter="all" aria-pressed="true">Todos</button>
-            <button class="filter-chip" type="button" data-category-filter="servicios" aria-pressed="false">Servicios</button>
-            <button class="filter-chip" type="button" data-category-filter="administracion" aria-pressed="false">Administración</button>
+            <button class="filter-chip" type="button" data-category-filter="servicios" aria-pressed="false">Servicios de trabajo</button>
+            <button class="filter-chip" type="button" data-category-filter="administracion" aria-pressed="false">Administración y soporte</button>
           </div>
         </div>
 
@@ -112,8 +139,9 @@
 
         <div class="service-group" aria-labelledby="work-services-title" data-service-group="servicios">
           <div class="group-heading">
-            <p class="eyebrow">Sección 1</p>
+            <p class="eyebrow">Categoría</p>
             <h3 id="work-services-title">Servicios de trabajo</h3>
+            <p>Plataformas de uso cotidiano para análisis, procesamiento geoespacial, gestión de campañas y publicación de datos.</p>
           </div>
 
           <div class="card-grid">
@@ -121,20 +149,33 @@
               class="service-card"
               data-service-card
               data-category="servicios"
-              data-search-text="jupyterlab servicios trabajo notebooks analisis python"
+              data-search-text="jupyterlab servicios trabajo notebooks analisis python laboratorio investigacion"
             >
-              <div class="card-icon" aria-hidden="true">JP</div>
-              <h4>JupyterLab</h4>
-              <p>Entorno interactivo para notebooks, análisis reproducible y trabajo colaborativo con Python.</p>
+              <div class="card-topline">
+                <span class="service-badge">Análisis</span>
+                <span class="service-meta">Puerto 8888</span>
+              </div>
+              <div class="service-brand">
+                <!-- Reemplazar este placeholder por un logo oficial en assets/logos/jupyterlab.svg cuando esté disponible. -->
+                <div class="card-icon card-icon-jupyter" aria-hidden="true">
+                  <span class="icon-ring"></span>
+                  <span class="icon-label">JL</span>
+                </div>
+                <div>
+                  <h4>JupyterLab</h4>
+                  <p class="service-tagline">Entorno de notebooks y análisis reproducible.</p>
+                </div>
+              </div>
+              <p>Acceso a notebooks, flujos de trabajo con Python y tareas de exploración o procesamiento técnico dentro del laboratorio.</p>
               <div class="card-actions">
                 <a
-                  class="card-button"
+                  class="card-button card-button-primary"
                   href="http://slamoge.gl.fcen.uba.ar:8888/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Abrir servicio JupyterLab"
                 >Abrir servicio</a>
-                <button class="copy-button" type="button" data-copy-url="http://slamoge.gl.fcen.uba.ar:8888/" data-copy-label="JupyterLab">Copiar URL</button>
+                <button class="copy-button" type="button" aria-label="Copiar URL de JupyterLab" data-copy-url="http://slamoge.gl.fcen.uba.ar:8888/" data-copy-label="JupyterLab">Copiar URL</button>
               </div>
             </article>
 
@@ -142,20 +183,33 @@
               class="service-card"
               data-service-card
               data-category="servicios"
-              data-search-text="webodm servicios trabajo fotogrametria dron geoespacial"
+              data-search-text="webodm servicios trabajo fotogrametria dron geoespacial ortofotos"
             >
-              <div class="card-icon" aria-hidden="true">WO</div>
-              <h4>WebODM</h4>
-              <p>Procesamiento fotogramétrico y generación de productos geoespaciales a partir de vuelos de dron.</p>
+              <div class="card-topline">
+                <span class="service-badge">Fotogrametría</span>
+                <span class="service-meta">Puerto 8000</span>
+              </div>
+              <div class="service-brand">
+                <!-- Reemplazar este placeholder por un logo oficial en assets/logos/webodm.svg cuando esté disponible. -->
+                <div class="card-icon card-icon-webodm" aria-hidden="true">
+                  <span class="icon-grid"></span>
+                  <span class="icon-label">WO</span>
+                </div>
+                <div>
+                  <h4>WebODM</h4>
+                  <p class="service-tagline">Procesamiento geoespacial de campañas con drones.</p>
+                </div>
+              </div>
+              <p>Acceso a procesamiento fotogramétrico, generación de productos raster y revisión de proyectos derivados de relevamientos aéreos.</p>
               <div class="card-actions">
                 <a
-                  class="card-button"
+                  class="card-button card-button-primary"
                   href="http://slamoge.gl.fcen.uba.ar:8000/login/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Abrir servicio WebODM"
                 >Abrir servicio</a>
-                <button class="copy-button" type="button" data-copy-url="http://slamoge.gl.fcen.uba.ar:8000/login/" data-copy-label="WebODM">Copiar URL</button>
+                <button class="copy-button" type="button" aria-label="Copiar URL de WebODM" data-copy-url="http://slamoge.gl.fcen.uba.ar:8000/login/" data-copy-label="WebODM">Copiar URL</button>
               </div>
             </article>
 
@@ -163,20 +217,33 @@
               class="service-card"
               data-service-card
               data-category="servicios"
-              data-search-text="geoserver servicios trabajo capas geograficas ogc espaciales"
+              data-search-text="geoserver servicios trabajo capas geograficas ogc mapas publicacion"
             >
-              <div class="card-icon" aria-hidden="true">GS</div>
-              <h4>GeoServer</h4>
-              <p>Publicación y consulta de capas geográficas, servicios OGC y datos espaciales del laboratorio.</p>
+              <div class="card-topline">
+                <span class="service-badge">Publicación</span>
+                <span class="service-meta">Servicio geoespacial</span>
+              </div>
+              <div class="service-brand">
+                <!-- Reemplazar este placeholder por un logo oficial en assets/logos/geoserver.svg cuando esté disponible. -->
+                <div class="card-icon card-icon-geoserver" aria-hidden="true">
+                  <span class="icon-layers"></span>
+                  <span class="icon-label">GS</span>
+                </div>
+                <div>
+                  <h4>GeoServer</h4>
+                  <p class="service-tagline">Capas OGC y servicios cartográficos del laboratorio.</p>
+                </div>
+              </div>
+              <p>Publicación y consulta de datos espaciales, capas institucionales y servicios interoperables para proyectos y visualización técnica.</p>
               <div class="card-actions">
                 <a
-                  class="card-button"
+                  class="card-button card-button-primary"
                   href="http://slamoge.gl.fcen.uba.ar:5432/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Abrir servicio GeoServer"
                 >Abrir servicio</a>
-                <button class="copy-button" type="button" data-copy-url="http://slamoge.gl.fcen.uba.ar:5432/" data-copy-label="GeoServer">Copiar URL</button>
+                <button class="copy-button" type="button" aria-label="Copiar URL de GeoServer" data-copy-url="http://slamoge.gl.fcen.uba.ar:5432/" data-copy-label="GeoServer">Copiar URL</button>
               </div>
             </article>
 
@@ -184,20 +251,33 @@
               class="service-card"
               data-service-card
               data-category="servicios"
-              data-search-text="dronedb servicios trabajo imagenes ortomosaicos campañas dron"
+              data-search-text="dronedb servicios trabajo imagenes ortomosaicos campañas dron catalogo"
             >
-              <div class="card-icon" aria-hidden="true">DD</div>
-              <h4>DroneDB</h4>
-              <p>Catálogo y gestión de colecciones de imágenes, ortomosaicos y activos asociados a campañas.</p>
+              <div class="card-topline">
+                <span class="service-badge">Repositorio</span>
+                <span class="service-meta">Puerto 5000</span>
+              </div>
+              <div class="service-brand">
+                <!-- Reemplazar este placeholder por un logo oficial en assets/logos/dronedb.svg cuando esté disponible. -->
+                <div class="card-icon card-icon-dronedb" aria-hidden="true">
+                  <span class="icon-archive"></span>
+                  <span class="icon-label">DB</span>
+                </div>
+                <div>
+                  <h4>DroneDB</h4>
+                  <p class="service-tagline">Gestión de colecciones, campañas y activos derivados.</p>
+                </div>
+              </div>
+              <p>Catálogo interno para imágenes, ortomosaicos, colecciones y materiales técnicos vinculados a campañas del laboratorio.</p>
               <div class="card-actions">
                 <a
-                  class="card-button"
+                  class="card-button card-button-primary"
                   href="http://slamoge.gl.fcen.uba.ar:5000/login"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Abrir servicio DroneDB"
                 >Abrir servicio</a>
-                <button class="copy-button" type="button" data-copy-url="http://slamoge.gl.fcen.uba.ar:5000/login" data-copy-label="DroneDB">Copiar URL</button>
+                <button class="copy-button" type="button" aria-label="Copiar URL de DroneDB" data-copy-url="http://slamoge.gl.fcen.uba.ar:5000/login" data-copy-label="DroneDB">Copiar URL</button>
               </div>
             </article>
           </div>
@@ -205,8 +285,9 @@
 
         <div class="service-group" aria-labelledby="admin-services-title" data-service-group="administracion">
           <div class="group-heading">
-            <p class="eyebrow">Sección 2</p>
+            <p class="eyebrow">Categoría</p>
             <h3 id="admin-services-title">Administración y soporte</h3>
+            <p>Accesos de administración, documentación operativa y recursos de soporte para mantenimiento del entorno.</p>
           </div>
 
           <div class="card-grid">
@@ -216,18 +297,31 @@
               data-category="administracion"
               data-search-text="webmin administracion soporte gestion monitoreo servidor configuracion"
             >
-              <div class="card-icon" aria-hidden="true">WM</div>
-              <h4>Webmin</h4>
-              <p>Panel de administración del servidor para tareas de gestión, monitoreo y configuración general.</p>
+              <div class="card-topline">
+                <span class="service-badge">Administración</span>
+                <span class="service-meta">Puerto 10000</span>
+              </div>
+              <div class="service-brand">
+                <!-- Reemplazar este placeholder por un logo oficial en assets/logos/webmin.svg cuando esté disponible. -->
+                <div class="card-icon card-icon-webmin" aria-hidden="true">
+                  <span class="icon-console"></span>
+                  <span class="icon-label">WM</span>
+                </div>
+                <div>
+                  <h4>Webmin</h4>
+                  <p class="service-tagline">Gestión centralizada del servidor y sus servicios.</p>
+                </div>
+              </div>
+              <p>Panel para monitoreo, configuración, revisión de estado y tareas administrativas sobre la infraestructura del servidor.</p>
               <div class="card-actions">
                 <a
-                  class="card-button"
+                  class="card-button card-button-primary"
                   href="http://slamoge.gl.fcen.uba.ar:10000"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Abrir servicio Webmin"
                 >Abrir servicio</a>
-                <button class="copy-button" type="button" data-copy-url="http://slamoge.gl.fcen.uba.ar:10000" data-copy-label="Webmin">Copiar URL</button>
+                <button class="copy-button" type="button" aria-label="Copiar URL de Webmin" data-copy-url="http://slamoge.gl.fcen.uba.ar:10000" data-copy-label="Webmin">Copiar URL</button>
               </div>
             </article>
 
@@ -235,36 +329,81 @@
               class="service-card"
               data-service-card
               data-category="administracion"
-              data-search-text="postgresql administracion soporte documentacion guia base de datos acceso"
+              data-search-text="postgresql administracion soporte documentacion guia base de datos acceso conexiones"
             >
-              <div class="card-icon" aria-hidden="true">PG</div>
-              <h4>Guía de acceso y documentación de PostgreSQL</h4>
-              <p>Guía de acceso, conexión y uso de bases de datos PostgreSQL disponibles para proyectos del laboratorio.</p>
-              <a class="card-button" href="docs/postgresql.html" aria-label="Ver documentación de PostgreSQL">Ver documentación</a>
+              <div class="card-topline">
+                <span class="service-badge">Base de datos</span>
+                <span class="service-meta">Documentación</span>
+              </div>
+              <div class="service-brand">
+                <!-- Reemplazar este placeholder por un logo oficial en assets/logos/postgresql.svg cuando esté disponible. -->
+                <div class="card-icon card-icon-postgresql" aria-hidden="true">
+                  <span class="icon-database"></span>
+                  <span class="icon-label">PG</span>
+                </div>
+                <div>
+                  <h4>PostgreSQL</h4>
+                  <p class="service-tagline">Guías de acceso, conexión y uso de bases de datos.</p>
+                </div>
+              </div>
+              <p>Referencia técnica para conexión, credenciales, puertos y buenas prácticas de trabajo con bases PostgreSQL del laboratorio.</p>
+              <div class="card-actions">
+                <a class="card-button card-button-primary" href="docs/postgresql.html" aria-label="Ver documentación de PostgreSQL">Ver documentación</a>
+              </div>
             </article>
 
             <article
               class="service-card"
               data-service-card
               data-category="administracion"
-              data-search-text="ssh administracion soporte documentacion guia acceso claves servidores"
+              data-search-text="ssh terminal shell administracion soporte documentacion guia acceso claves servidores"
             >
-              <div class="card-icon" aria-hidden="true">SH</div>
-              <h4>Guía de acceso por SSH</h4>
-              <p>Instrucciones para acceder por SSH, gestionar claves y conectarse de forma segura a los servidores.</p>
-              <a class="card-button" href="docs/ssh.html" aria-label="Ver documentación de acceso SSH">Ver documentación</a>
+              <div class="card-topline">
+                <span class="service-badge">Acceso remoto</span>
+                <span class="service-meta">Terminal</span>
+              </div>
+              <div class="service-brand">
+                <!-- Reemplazar este placeholder por un logo oficial en assets/logos/ssh.svg cuando esté disponible. -->
+                <div class="card-icon card-icon-ssh" aria-hidden="true">
+                  <span class="icon-terminal"></span>
+                  <span class="icon-label">SSH</span>
+                </div>
+                <div>
+                  <h4>SSH / acceso por terminal</h4>
+                  <p class="service-tagline">Ingreso seguro al servidor y gestión de claves.</p>
+                </div>
+              </div>
+              <p>Instrucciones para autenticación, uso de claves, conexión remota y pautas de acceso seguro a la infraestructura.</p>
+              <div class="card-actions">
+                <a class="card-button card-button-primary" href="docs/ssh.html" aria-label="Ver documentación de acceso SSH">Ver documentación</a>
+              </div>
             </article>
 
             <article
               class="service-card"
               data-service-card
               data-category="administracion"
-              data-search-text="diagnostico administracion soporte documentacion servidor incidentes mantenimiento"
+              data-search-text="diagnostico documentacion soporte administracion servidor incidentes mantenimiento procedimientos"
             >
-              <div class="card-icon" aria-hidden="true">AD</div>
-              <h4>Diagnóstico del servidor y documentación administrativa</h4>
-              <p>Documentación técnica para revisión de estado, resolución de incidentes y procedimientos de administración.</p>
-              <a class="card-button" href="docs/administracion.html" aria-label="Ver documentación de diagnóstico y administración">Ver documentación</a>
+              <div class="card-topline">
+                <span class="service-badge">Soporte técnico</span>
+                <span class="service-meta">Procedimientos</span>
+              </div>
+              <div class="service-brand">
+                <!-- Reemplazar este placeholder por un logo oficial en assets/logos/documentacion.svg cuando esté disponible. -->
+                <div class="card-icon card-icon-docs" aria-hidden="true">
+                  <span class="icon-doc"></span>
+                  <span class="icon-label">DOC</span>
+                </div>
+                <div>
+                  <h4>Documentación y diagnósticos</h4>
+                  <p class="service-tagline">Manuales, estado operativo e intervenciones técnicas.</p>
+                </div>
+              </div>
+              <p>Procedimientos de administración, revisión de estado, resolución de incidentes y documentación técnica del entorno.</p>
+              <div class="card-actions">
+                <a class="card-button card-button-primary" href="docs/administracion.html" aria-label="Ver documentación de diagnóstico y administración">Ver documentación</a>
+              </div>
             </article>
           </div>
         </div>
@@ -274,41 +413,41 @@
     </section>
 
     <section class="resources section section-muted" id="resources" aria-labelledby="resources-title">
-      <div class="container split-layout">
-        <div>
-          <p class="eyebrow">Recursos compartidos</p>
-          <h2 id="resources-title">Documentación y espacios de colaboración</h2>
+      <div class="container resources-grid">
+        <div class="section-heading section-heading-compact">
+          <p class="eyebrow">Recursos técnicos</p>
+          <h2 id="resources-title">Documentación, operación y referencia interna</h2>
           <p>
-            Este bloque puede alojar enlaces persistentes a manuales internos, wikis, procedimientos de
-            incorporación y directorios de proyectos.
+            Espacio pensado para centralizar documentación estable, lineamientos operativos y referencias de trabajo
+            vinculadas a la infraestructura de LaMoGe.
           </p>
         </div>
 
-        <dl class="resource-list">
-          <div>
-            <dt>Base de conocimiento</dt>
-            <dd>Espacio sugerido para wiki interna, manuales operativos o preguntas frecuentes.</dd>
-          </div>
-          <div>
-            <dt>Directorio de proyectos</dt>
-            <dd>Espacio sugerido para proyectos activos, repositorios y responsables de cada área.</dd>
-          </div>
-          <div>
-            <dt>Ingreso de nuevos integrantes</dt>
-            <dd>Espacio sugerido para tareas iniciales, credenciales y recursos de orientación.</dd>
-          </div>
-        </dl>
+        <div class="resource-panels">
+          <article class="resource-card">
+            <h3>Base de conocimiento</h3>
+            <p>Manual institucional, preguntas frecuentes, procedimientos de uso y criterios de acceso a servicios.</p>
+          </article>
+          <article class="resource-card">
+            <h3>Proyectos y datos</h3>
+            <p>Directorios de proyectos activos, responsables técnicos, conjuntos de datos y espacios de colaboración.</p>
+          </article>
+          <article class="resource-card">
+            <h3>Incorporación y soporte</h3>
+            <p>Guías para nuevas personas integrantes, credenciales, accesos iniciales y rutas de consulta administrativa.</p>
+          </article>
+        </div>
       </div>
     </section>
 
     <section class="support section" id="support" aria-labelledby="support-title">
       <div class="container support-panel">
         <div>
-          <p class="eyebrow">Soporte</p>
-          <h2 id="support-title">¿Necesita ayuda para actualizar esta página?</h2>
+          <p class="eyebrow">Mantenimiento</p>
+          <h2 id="support-title">Actualización simple y mantenimiento directo</h2>
           <p>
-            Edite los enlaces, los textos breves y los datos de contacto directamente en los archivos estáticos. La
-            estructura está pensada para mantenimiento simple sobre Apache, sin herramientas adicionales.
+            El sitio permanece estático y ligero. Los enlaces y textos de cada tarjeta pueden editarse directamente en
+            index.html, y los recursos visuales futuros pueden incorporarse en assets/logos/ sin modificar la estructura general.
           </p>
         </div>
         <a class="button button-primary" href="mailto:admin@example.edu">Contactar administración</a>
@@ -318,8 +457,21 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>Administración y soporte: actualice este texto con el correo institucional, la persona de referencia técnica o el canal interno correspondiente.</p>
-      <p>&copy; <span data-current-year></span> Intranet de LaMoGe</p>
+      <div class="footer-grid">
+        <div>
+          <p class="footer-title">LaMoGe | Laboratorio de Modelado Análogo</p>
+          <p>Portal institucional de acceso a servicios, documentación y recursos técnicos alojados en el servidor del laboratorio.</p>
+        </div>
+        <div>
+          <p class="footer-heading">Dependencia</p>
+          <p>IDEAN · Instituto de Estudios Andinos</p>
+        </div>
+        <div>
+          <p class="footer-heading">Alcance</p>
+          <p>Infraestructura interna para investigación, soporte técnico y administración.</p>
+        </div>
+      </div>
+      <p class="footer-copy">&copy; <span data-current-year></span> Intranet LaMoGe</p>
     </div>
   </footer>
 
