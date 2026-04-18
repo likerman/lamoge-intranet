@@ -16,13 +16,24 @@
   <!-- Reemplazar esta compuerta temporal por autenticación real del servidor cuando esté disponible. -->
   <div class="access-gate" data-access-gate aria-hidden="false">
     <div class="access-gate-dialog" role="dialog" aria-modal="true" aria-labelledby="access-gate-title" aria-describedby="access-gate-description">
-      <p class="eyebrow">Portal institucional</p>
-      <h2 id="access-gate-title">Acceso restringido</h2>
-      <p id="access-gate-description" class="access-gate-text">
-        Este portal interno de LaMoGe reúne servicios, herramientas y recursos técnicos de uso institucional.
-        Ingrese la clave compartida para continuar.
-      </p>
-      <p class="access-gate-note">Uso exclusivo para personas autorizadas del laboratorio y del entorno institucional asociado.</p>
+      <div class="access-gate-header">
+        <p class="eyebrow">Portal institucional</p>
+        <div class="access-gate-brand">
+          <img src="assets/lamoge-logo.png" alt="" width="72" height="72" aria-hidden="true">
+          <div>
+            <p class="access-gate-kicker">LaMoGe · IDEAN</p>
+            <h2 id="access-gate-title">Acceso restringido</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="access-gate-body">
+        <p id="access-gate-description" class="access-gate-text">
+          Este portal interno reúne servicios, herramientas y recursos técnicos de uso institucional del Laboratorio de Modelado Análogo.
+          Ingrese la clave compartida para habilitar el acceso.
+        </p>
+        <p class="access-gate-note">Uso exclusivo para personas autorizadas del laboratorio y del entorno académico asociado.</p>
+      </div>
 
       <form class="access-gate-form" data-access-form>
         <label class="search-field access-field" for="shared-password">
