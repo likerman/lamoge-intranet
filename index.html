@@ -78,6 +78,7 @@
         <nav class="site-nav" aria-label="Navegación principal">
           <ul>
             <li><a href="#services">Servicios</a></li>
+            <li><a href="#guides">Guías</a></li>
             <li><a href="#server-status">Estado</a></li>
             <li><a href="#resources">Recursos</a></li>
             <li><a href="#support">Soporte</a></li>
@@ -573,6 +574,196 @@
             <p class="status-updated" data-status-updated>Última actualización: sin datos.</p>
             <p class="status-fallback" data-status-fallback hidden>No fue posible cargar el estado del servidor en este momento.</p>
           </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="guides section" id="guides" aria-labelledby="guides-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Guías de uso</p>
+          <h2 id="guides-title">Documentación de referencia para el uso del servidor</h2>
+          <p>
+            Orientaciones breves para el uso cotidiano de la infraestructura de LaMoGe. Reúne criterios de acceso,
+            uso de servicios, organización del almacenamiento, consulta del estado operativo y canales de soporte.
+          </p>
+        </div>
+
+        <div class="guide-quicklinks" aria-label="Accesos rápidos de documentación">
+          <a class="guide-quicklink" href="#guia-acceso-servidor">Acceso al servidor</a>
+          <a class="guide-quicklink" href="#guia-webodm">Uso de WebODM</a>
+          <a class="guide-quicklink" href="#guia-almacenamiento">Almacenamiento</a>
+          <a class="guide-quicklink" href="#guia-estado-servidor">Estado del servidor</a>
+          <a class="guide-quicklink" href="#guia-soporte">Soporte</a>
+        </div>
+
+        <div class="guides-grid">
+          <article class="guide-card" id="guia-acceso-servidor">
+            <div class="guide-card-head">
+              <div class="card-icon card-icon-guide-access" aria-hidden="true">
+                <svg class="service-glyph" viewBox="0 0 48 48" focusable="false">
+                  <rect x="11" y="14" width="26" height="20" rx="3"></rect>
+                  <path d="M18 20.5 14.5 24 18 27.5"></path>
+                  <path d="M22 28h11"></path>
+                  <path d="M11 18h26"></path>
+                </svg>
+              </div>
+              <div>
+                <p class="guide-kicker">Acceso remoto</p>
+                <h3>Acceso al servidor</h3>
+                <p class="guide-summary">Ingreso institucional y uso responsable de credenciales.</p>
+              </div>
+            </div>
+            <p>
+              El acceso al servidor se realiza con autorización previa y credenciales institucionales. Para trabajo en
+              terminal, transferencia de archivos y gestión de sesiones, el canal de referencia es SSH.
+            </p>
+            <ul class="guide-points">
+              <li>El acceso SSH es el mecanismo estándar para ingresar al entorno de trabajo.</li>
+              <li>Las credenciales son personales y no deben compartirse.</li>
+              <li>Los inconvenientes de acceso deben informarse a la administración.</li>
+              <li>Conviene verificar la conexión y la ruta de trabajo antes de iniciar tareas prolongadas.</li>
+            </ul>
+            <div class="card-actions">
+              <!-- TODO: reemplazar por la guía definitiva de acceso SSH cuando esté disponible. -->
+              <a class="card-button card-button-primary" href="docs/ssh.html">Ver guía</a>
+            </div>
+          </article>
+
+          <article class="guide-card" id="guia-webodm">
+            <div class="guide-card-head">
+              <div class="card-icon card-icon-guide-webodm" aria-hidden="true">
+                <svg class="service-glyph" viewBox="0 0 48 48" focusable="false">
+                  <path d="M12 31.5 24 15l12 16.5Z"></path>
+                  <path d="M18.5 25.5h11"></path>
+                  <path d="M21 21.5h6"></path>
+                  <path d="M16 34.5h16"></path>
+                </svg>
+              </div>
+              <div>
+                <p class="guide-kicker">Servicio de fotogrametría</p>
+                <h3>Uso de WebODM</h3>
+                <p class="guide-summary">Cuentas individuales y gestión explícita de accesos.</p>
+              </div>
+            </div>
+            <p>
+              WebODM debe utilizarse con cuentas individuales. Cada persona debe ingresar con su propio usuario para
+              preservar la trazabilidad del trabajo y la correcta asignación de proyectos.
+            </p>
+            <ul class="guide-points">
+              <li>Los proyectos son personales por defecto.</li>
+              <li>El acceso compartido debe solicitarse y configurarse de forma explícita.</li>
+              <li>No deben utilizarse cuentas genéricas o compartidas.</li>
+              <li>Conviene nombrar proyectos y resultados de forma consistente para facilitar su seguimiento.</li>
+            </ul>
+            <div class="card-actions">
+              <!-- TODO: reemplazar por la guía completa de uso de WebODM cuando esté disponible. -->
+              <a class="card-button card-button-primary" href="docs/webodm.html">Ver guía</a>
+            </div>
+          </article>
+
+          <article class="guide-card" id="guia-almacenamiento">
+            <div class="guide-card-head">
+              <div class="card-icon card-icon-guide-storage" aria-hidden="true">
+                <svg class="service-glyph" viewBox="0 0 48 48" focusable="false">
+                  <ellipse cx="24" cy="16" rx="10" ry="4.5"></ellipse>
+                  <path d="M14 16v8.5c0 2.5 4.5 4.5 10 4.5s10-2 10-4.5V16"></path>
+                  <path d="M14 24.5V32c0 2.5 4.5 4.5 10 4.5s10-2 10-4.5v-7.5"></path>
+                </svg>
+              </div>
+              <div>
+                <p class="guide-kicker">Organización de datos</p>
+                <h3>Almacenamiento y buenas prácticas</h3>
+                <p class="guide-summary">Criterios básicos para ordenar datos y evitar uso ineficiente del espacio.</p>
+              </div>
+            </div>
+            <p>
+              El servidor dispone de áreas con funciones diferenciadas. <code>/datos</code> se utiliza para trabajo
+              activo, <code>/backup</code> para resguardo y archivo, y <code>/fast</code> para procesamiento temporal
+              o tareas intensivas de entrada y salida.
+            </p>
+            <ul class="guide-points">
+              <li><code>/datos</code>: proyectos activos y resultados en curso.</li>
+              <li><code>/backup</code>: copias de resguardo y materiales consolidados.</li>
+              <li><code>/fast</code>: procesamiento temporal, no archivo permanente.</li>
+              <li>Evitar duplicaciones innecesarias de datasets voluminosos.</li>
+              <li>Eliminar datos temporales o pruebas cuando dejen de ser necesarios.</li>
+            </ul>
+            <div class="card-actions">
+              <!-- TODO: reemplazar por la guía específica de almacenamiento y buenas prácticas. -->
+              <a class="card-button card-button-primary" href="docs/usos-servidor.html">Ver guía</a>
+            </div>
+          </article>
+
+          <article class="guide-card" id="guia-estado-servidor">
+            <div class="guide-card-head">
+              <div class="card-icon card-icon-guide-status" aria-hidden="true">
+                <svg class="service-glyph" viewBox="0 0 48 48" focusable="false">
+                  <path d="M13 31h22"></path>
+                  <path d="M16 31V19"></path>
+                  <path d="M24 31V15"></path>
+                  <path d="M32 31V22"></path>
+                </svg>
+              </div>
+              <div>
+                <p class="guide-kicker">Monitoreo</p>
+                <h3>Estado del servidor</h3>
+                <p class="guide-summary">Lectura rápida de recursos y disponibilidad de servicios.</p>
+              </div>
+            </div>
+            <p>
+              El panel de estado ofrece una referencia operativa del entorno. Permite consultar memoria disponible,
+              uso de disco en los volúmenes principales y disponibilidad de servicios relevantes.
+            </p>
+            <ul class="guide-points">
+              <li>Resume memoria y uso de <code>/datos</code>, <code>/backup</code> y <code>/fast</code>.</li>
+              <li>Informa el estado general de PostgreSQL, Docker, GeoServer, WebODM y Jupyter.</li>
+              <li>Conviene consultarlo antes de iniciar tareas intensivas o reportar incidentes.</li>
+              <li>Si un servicio aparece degradado, es recomendable evitar nuevas cargas hasta confirmar su estado.</li>
+            </ul>
+            <div class="card-actions">
+              <!-- TODO: reemplazar por la guía completa de lectura del estado del servidor cuando esté disponible. -->
+              <a class="card-button card-button-primary" href="docs/estado-servidor.html">Ver guía</a>
+            </div>
+          </article>
+
+          <article class="guide-card guide-card-support" id="guia-soporte">
+            <div class="guide-card-head">
+              <div class="card-icon card-icon-guide-support" aria-hidden="true">
+                <svg class="service-glyph" viewBox="0 0 48 48" focusable="false">
+                  <circle cx="24" cy="18" r="5"></circle>
+                  <path d="M16 34c1.8-4.3 5-6.5 8-6.5s6.2 2.2 8 6.5"></path>
+                  <path d="M34 16h3.5A2.5 2.5 0 0 1 40 18.5v5A2.5 2.5 0 0 1 37.5 26H35"></path>
+                  <path d="M14 16h-3.5A2.5 2.5 0 0 0 8 18.5v5A2.5 2.5 0 0 0 10.5 26H13"></path>
+                </svg>
+              </div>
+              <div>
+                <p class="guide-kicker">Administración</p>
+                <h3>Soporte y administración</h3>
+                <p class="guide-summary">Canales para altas, incidentes y consultas operativas.</p>
+              </div>
+            </div>
+            <p>
+              Los problemas de acceso, las solicitudes de cuenta, los incidentes de servicio y las consultas sobre
+              permisos deben canalizarse a través del equipo administrador.
+            </p>
+            <ul class="guide-points">
+              <li>Informar con precisión el servicio afectado, el horario y el tipo de problema observado.</li>
+              <li>Para altas o cambios de permisos, indicar usuario, necesidad y alcance del pedido.</li>
+              <li>Antes de reportar una falla, conviene revisar el panel de estado del servidor.</li>
+              <li>Los cambios de acceso deben quedar coordinados por los canales institucionales definidos.</li>
+            </ul>
+            <div class="support-contact-block">
+              <p><strong>Contacto administrativo</strong></p>
+              <p>Correo: <a href="mailto:admin@example.edu">admin@example.edu</a></p>
+              <p>Referencia: Administración de infraestructura LaMoGe / IDEAN</p>
+              <p class="support-contact-note">Actualizar cuando se definan los contactos institucionales definitivos.</p>
+            </div>
+            <div class="card-actions">
+              <!-- TODO: reemplazar por la guía formal de soporte y administración cuando esté disponible. -->
+              <a class="card-button card-button-primary" href="docs/administracion.html">Ver guía</a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
